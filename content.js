@@ -1,13 +1,7 @@
 chrome.runtime.sendMessage({todo: 'showPageAction'})
 
 
-function toHtml(text) {
-    console.log('received text:', text)
-    return 'transformed'
-}
-
 $(function() {
-    console.log('amir loaded')
     $('markdown-toolbar').each(function () {
         var toolbar = $(this)
 
@@ -26,9 +20,10 @@ aria-label="to RTL markdown" role="button">${icon}</md-rtl>`
         toolbar.append(group)
 
         button.click(function() {
-            var html = toHtml(textArea.val())
-            if (html) {
-                textArea.text(html)
+            var markdown = textArea.val()
+            if (markdown) {
+                var html = marked(textArea.val())
+                textArea.val(html)
             }
             button.blur()
         })
