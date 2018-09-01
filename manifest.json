@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["jquery.js", "content.js"],
+      "js": ["jquery.js", "marked.js", "content.js"],
       "css": ["content.css"]
     }
   ],
