@@ -3,21 +3,10 @@
   "version": "1.0",
   "description": "a simple rtl markdown parser for github",
   "permissions": ["activeTab", "declarativeContent", "tabs", "https://github.com/*"],
-  "options_page": "options.html",
-  "page_action": {
-    "default_icon": "images/get_started16.png",
-    "default_popup": "popup.html",
-    "default_title": "RTL markdown"
-  },
-  "background": {
-    "scripts": ["eventPage.js"],
-    "persistent": false
-  },
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["jquery.js", "marked.js", "content.js"],
-      "css": ["content.css"]
+      "js": ["jquery.js", "marked.js", "content.js"]
     }
   ],
   "icons": {
