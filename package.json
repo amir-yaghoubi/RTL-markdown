@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/amir-yaghoobi/RTL-markdown#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "marked": "git+https://github.com/amir-yaghoobi/marked.git"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

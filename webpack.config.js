@@ -8,10 +8,13 @@ const iconsPattern = {
 	dest: 'images'
 }
 const manifestJson = {
-	from: 'manifest.json',
+	from: 'src/manifest.json',
 	to: 'manifest.json'
 }
-
+const marked = {
+	from: 'src/marked.min.js',
+	to: 'marked.min.js'
+}
 
 module.exports = (_, argv) => {
 	return {
@@ -33,7 +36,7 @@ module.exports = (_, argv) => {
 	    },
 	    plugins: [
 		    new CleanWebpackPlugin(['dist']),
-		    new CopyWebpackPlugin([ iconsPattern, manifestJson ]),
+		    new CopyWebpackPlugin([ iconsPattern, manifestJson, marked ]),
 	    ],
 	    module: {
 		    rules: [
@@ -53,6 +56,11 @@ module.exports = (_, argv) => {
 				    exclude: /node_modules/
 			    }
 		    ]
-	    }
+	    },
+		resolve: {
+			alias: {
+				jquery: path.resolve(path.join(__dirname, 'node_modules', 'jquery'))
+			},
+		},
 	}
 }
