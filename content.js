@@ -1,15 +1,6 @@
-chrome.runtime.sendMessage({todo: 'showPageAction'})
 
-
-$(function() {
-    $('markdown-toolbar').each(function () {
-        var toolbar = $(this)
-
-        var parent = toolbar.parent().parent()
-        var writeElement = parent.find('.write-content')
-        var textArea = writeElement.find('textarea')
-
-        var icon = `<svg version="1.1" id="rtl_md_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+// ----------- common components ------------
+var icon = `<svg version="1.1" id="rtl_md_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="16px" height="16px" viewBox="0 -80 511.624 511.623">
 	<g>
 		<path fill="#586069" d="M9.135,200.996h392.862v54.818c0,2.475,0.9,4.613,2.707,6.424c1.811,1.81,3.953,2.713,6.427,2.713
@@ -25,25 +16,45 @@ $(function() {
 	</g>
 </svg>
 `
-
-        var button = `<md-rtl tabindex="-1" class="toolbar-item tooltipped tooltipped-n"
+var button = `<md-rtl tabindex="-1" class="toolbar-item tooltipped tooltipped-n"
 aria-label="to RTL markdown" role="button">${icon}</md-rtl>`
-        var group = `<div class="toolbar-group" style="margin-left: 5px;"></div>`
 
-        button = $(button)
-        group = $(group)
-        group.append(button)
-        toolbar.append(group)
+var group = `<div class="toolbar-group" style="margin-left: 5px;"></div>`
 
-        button.click(function() {
+// -----------------------------------------------------
+
+
+function attachToToolbar() {
+    var toolbars = $('markdown-toolbar')
+
+    toolbars.each(function () {
+        var toolbar = $(this)
+
+        var parent = toolbar.parent().parent()
+        var writeElement = parent.find('.write-content')
+        var textArea = writeElement.find('textarea')
+
+        var tbButton = $(button)
+        var tbGroup = $(group)
+        tbGroup.append(tbButton)
+        toolbar.append(tbGroup)
+
+        tbButton.click(function() {
             var markdown = textArea.val()
             if (markdown) {
                 var html = marked(textArea.val())
                 textArea.val(html)
             }
-            button.blur()
+            tbButton.blur()
         })
     })
 
+}
+
+$(document).ready(function() {
+    attachToToolbar()
+
+    // after ajax call
+    $('#js-repo-pjax-container').on('pjax:end', attachToToolbar);
 })
 
