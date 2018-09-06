@@ -1,0 +1,19 @@
+{
+  "name": "RTL markdown parser",
+  "version": "1.0",
+  "description": "a simple rtl markdown parser for github",
+  "permissions": ["activeTab", "declarativeContent", "tabs", "https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/rtl_16.png",
+    "32": "images/rtl_32.png",
+    "48": "images/rtl_48.png",
+    "128": "images/rtl_128.png"
+  },
+  "manifest_version": 2
+}
