@@ -1,6 +1,6 @@
 <h1 id="rtl-markdown" dir="rtl">RTL markdown</h1>
 
-[![npm](https://img.shields.io/npm/v/rtl-markdown-extension.svg)](https://www.npmjs.com/package/rtl-markdown-extension)
+<p dir="rtl"><a href="https://www.npmjs.com/package/rtl-markdown-extension"><img src="https://img.shields.io/npm/v/rtl-markdown-extension.svg" alt="npm"></a></p>
 
 <p dir="rtl">این پروژه یک افزونه کروم ساده برای سایت <a href="www.github.com">github</a> جهت تبدیل <code>markdown</code> نوشته شده به فرمت چب‌چین می‌باشد. </p>
 <h2 id="-" dir="rtl">نصب</h2>
