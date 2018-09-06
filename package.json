@@ -1,8 +1,7 @@
 {
-  "name": "RTL-markdown",
+  "name": "rtl-markdown-extension",
   "version": "1.0.0",
   "description": "Chrome extension to simply convert markdowns to RTL format in github.com",
-  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
