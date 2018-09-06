@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["content.js"]
+      "js": ["marked.min.js", "content.js"]
     }
   ],
   "icons": {
