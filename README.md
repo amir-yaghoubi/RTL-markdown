@@ -2,14 +2,14 @@
 
 <p dir="rtl"><a href="https://www.npmjs.com/package/rtl-markdown-extension"><img src="https://img.shields.io/npm/v/rtl-markdown-extension.svg" alt="npm"></a></p>
 
-<p dir="rtl">این پروژه یک افزونه کروم ساده برای سایت <a href="www.github.com">github</a> جهت تبدیل <code>markdown</code> نوشته شده به فرمت چب‌چین می‌باشد. </p>
+<p dir="rtl">این پروژه یک افزونه کروم ساده برای سایت <a href="https://github.com/">github</a> جهت تبدیل <code>markdown</code> نوشته شده به فرمت چب‌چین می‌باشد. </p>
 <h2 id="-" dir="rtl">نصب</h2>
 <p dir="rtl">از آنجایی که این افزونه هم‌اکنون در فاز توسعه قرار دارد، به منظور استفاده از این افزونه باید مراحل زیر را انجام دهید:</p>
 <ol>
-<li>clone the project <code>git clone https://github.com/amir-yaghoobi/RTL-markdown.git</code></li>
-<li>go to<code>Customize and control google chrome &gt; More tools &gt; Extensions</code></li>
+<li>Clone the project <code>git clone https://github.com/amir-yaghoobi/RTL-markdown.git</code></li>
+<li>Go to<code>Customize and control google chrome &gt; More tools &gt; Extensions</code></li>
 <li>Turn on <code>Developer mode</code></li>
-  <li>click on <code>Load unpacked</code> and select <strong>dist</strong> folder.</li>
+  <li>Click on <code>Load unpacked</code> and select <strong>dist</strong> folder.</li>
 </ol>
 
 <h2 id="-" dir="rtl">توسعه</h2>
