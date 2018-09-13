@@ -11,10 +11,7 @@ const manifestJson = {
 	from: 'src/manifest.json',
 	to: 'manifest.json'
 }
-const marked = {
-	from: 'src/marked.min.js',
-	to: 'marked.min.js'
-}
+
 
 module.exports = (_, argv) => {
 	return {
@@ -36,7 +33,7 @@ module.exports = (_, argv) => {
 	    },
 	    plugins: [
 		    new CleanWebpackPlugin(['dist']),
-		    new CopyWebpackPlugin([ iconsPattern, manifestJson, marked ]),
+		    new CopyWebpackPlugin([ iconsPattern, manifestJson ]),
 	    ],
 	    module: {
 		    rules: [

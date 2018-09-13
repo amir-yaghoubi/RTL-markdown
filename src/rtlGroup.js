@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import marked from 'marked'
 
 const _undoButton = `<md-rtl tabindex="-1" class="toolbar-item tooltipped tooltipped-n" style="padding: 0 5px;"
 aria-label="Undo" role="button"><svg version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
